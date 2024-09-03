@@ -226,10 +226,90 @@ https://mkzia.github.io/eas503-book/chapters/intro.html
 
 # Lecture 3 - 3rd Sep 2024
 
+- this class has 2 TAs.
+- lecture notes for previous week are in week1 folder of the github repo.
+- professor says he wont give a hard banker's rounding problem. for eg: 3.5 -> 4 <- 4.5
+
+```python
+def print_birthday():
+    msg = """Happy birthday to you!!!
+Happy birthday to you!!!
 
 
+Happy birthday, dear John
 
 
+Happy birthday to you!!!
+Happy birthday to you!!!"""
+    print(msg)
+
+ret_val = print_birthday()
+print(ret_val)  # this will print None
+```
+
+- notice how triple quotes will maintain the formatting and spaces.
+
+- Namespace and Scope:
+    - **Namespace**: 
+        - an association between identifiers and the things they represent in a program. 
+        - In Python, modules, classes, and objects act as namespaces.
+    - **Scope**: 
+        - The area of a program where a given variable maybe reference. 
+        - For examples, variables defined in functions are said to have local scope.
+
+
+```python
+y = 1
+def quadratic(a, b, c, X):
+    """ax^2 + bx + c"""
+    first = a * pow(x, 2) ## Changed
+    second = b * x
+    third = c
+    return first + second + third
+a =1
+b = 2
+c = 3
+x = 10  # here x is a global variable and is still picked up by quadratic() function.
+# This can be a source of errors
+X = 2
+quadratic(a, b, c, X)
+```
+
+```python
+'NH ' + 3 # this will not work. You cannot add a string type and an int type.
+
+'four score and ' + str(7) + 'years ago'
+# this will work
+
+x = 'He said, "they can\'t do this"'
+ 
+print(x)    # recognizes escape chars
+
+x           # does not recognize escape chars
+
+# this is a quirk of jupyter notebook
+```
+
+- in TSV files, each data point is separated by a tab
+    - for eg: x = 'col1\tcol2\tcol3'
+- in CSV files, each data point is separated by comma.
+
+- inorder to print /\/\:
+    - print('/\\/\\')
+
+- **Warning**: Input arguments to a function are not the same as the input function!
+
+```python
+
+number = input("Please enter a number: ")
+type(number) # str
+
+number = input("Please enter a number: ")
+number = int(number) # 3
+print(number * 4) # 12
+```
+
+## Instructor says he loves giving hard assignments on string formatting.
 
 
 
